@@ -4,6 +4,9 @@ import Footer from "./Components/Footer";
 import "./App.css";
 import Sidebar from "./Components/Sidebar";
 import { Switch } from "react-router-dom";
+import Monsters from "./Components/Monsters";
+import { Route } from "react-router-dom";
+import Home from "./Components/Home";
 
 function App() {
   return (
@@ -14,9 +17,11 @@ function App() {
       <Switch>
         <Sidebar />
       </Switch>
+      <div className="Home">
+        <Home />
 
-      <p>APP</p>
-
+        {/* <Route path="/Monsters" exact component={Monsters} /> */}
+      </div>
       <div className="footer">
         <Footer />
       </div>

@@ -13,7 +13,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "white" }}>
+      <IconContext.Provider value={{ color: "#cec2ae" }}>
         <div className="navbar">
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
