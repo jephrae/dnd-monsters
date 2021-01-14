@@ -10,8 +10,8 @@ export default function Monsters(props) {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        console.log("good");
-        setMonsters(json);
+        setMonsters([json]);
+        console.log(json);
       })
       .catch(console.error);
   }, []);
@@ -22,17 +22,15 @@ export default function Monsters(props) {
 
   return (
     <section className="container">
-      {/* {monsters.map((monsters) => {
+      {monsters.map((monsters) => {
         return (
           <div classname="monsters">
-            <Link to={`/MonsterDetails/${monsters.name}`} key={monsters.name}>
-              <div className="monster-name">{monsters.name}</div>
-            </Link>
             <p>{monsters.name}</p>
           </div>
         );
-      })} */}
-      <p>monster {monsters.name} test</p>
+      })}
+      <p>monster {monsters.index} test</p>
+      console.log({monsters.name})
     </section>
   );
 }

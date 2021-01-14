@@ -7,6 +7,8 @@ import { Switch } from "react-router-dom";
 import Monsters from "./Components/Monsters";
 import { Route } from "react-router-dom";
 import Home from "./Components/Home";
+import MonsterSearch from "./Components/MonsterSearch";
+import RandomMonster from "./Components/RandomMonster";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
       <div className="Home">
         <Home />
 
-        {/* <Route path="/Monsters" exact component={Monsters} /> */}
+        <Route path="/Monsters" exact component={Monsters} />
+        <Route path="/MonsterSearch" exact component={MonsterSearch} />
+        <Route path="/RandomMonster" exact component={RandomMonster} />
       </div>
       <div className="footer">
         <Footer />
