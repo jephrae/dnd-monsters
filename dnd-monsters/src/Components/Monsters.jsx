@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const url = "https://www.dnd5eapi.co/api/monsters";
 
@@ -30,7 +30,11 @@ export default function Monsters() {
         {monsterData.map((monsters, index) => {
           // const { name, index } = monster;
           // console.log(monsters.results);
-          return <li key={index}>{monsters.name}</li>;
+          return (
+            <Link to={`/MonsterDetials/${monsters.index}`}>
+              <li key={index}>{monsters.name}</li>
+            </Link>
+          );
         })}
       </ul>
     </>
