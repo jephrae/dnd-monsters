@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const url = "https://www.dnd5eapi.co/api/monsters";
 
-export default function Monsters() {
+export default function Monsters(props) {
   const [monsters, setMonsters] = useState([]);
 
   const getMonsters = async () => {
@@ -31,8 +31,8 @@ export default function Monsters() {
           // const { name, index } = monster;
           // console.log(monsters.results);
           return (
-            <Link to={`/MonsterDetials/${monsters.index}`}>
-              <li key={index}>{monsters.name}</li>
+            <Link to={`/MonsterDetails/${monsters.index}`} key={monsters.index}>
+              <li key={monsters.index}>{monsters.name}</li>
             </Link>
           );
         })}

@@ -8,7 +8,7 @@ export default function MonsterDetails(props) {
       .then((res) => res.json())
       .then((res) => setMonster(res))
       .catch(console.error);
-    console.log(props.match.params.id);
+    console.log(monster);
   }, [props.match.params.id]);
 
   if (!monster) {
@@ -18,6 +18,7 @@ export default function MonsterDetails(props) {
   return (
     <div>
       <h3> monster deets test</h3>
+      {monster.name}
     </div>
   );
 }

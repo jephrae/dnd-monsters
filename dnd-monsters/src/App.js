@@ -1,15 +1,14 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import "./App.css";
 import Sidebar from "./Components/Sidebar";
-import { Switch } from "react-router-dom";
 import Monsters from "./Components/Monsters";
-import { Route } from "react-router-dom";
 import Home from "./Components/Home";
 import MonsterSearch from "./Components/MonsterSearch";
 import RandomMonster from "./Components/RandomMonster";
 import MonsterDetails from "./Components/MonsterDetails";
+import "./App.css";
 
 function App() {
   return (
@@ -26,7 +25,7 @@ function App() {
         <Route path="/Monsters" exact component={Monsters} />
         <Route path="/MonsterSearch" exact component={MonsterSearch} />
         <Route path="/RandomMonster" exact component={RandomMonster} />
-        <Route path="/MonsterDetails/:id" exact componsnet={MonsterDetails} />
+        <Route path="/MonsterDetails/:id" component={MonsterDetails} />
       </div>
       <div className="footer">
         <Footer />

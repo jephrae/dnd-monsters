@@ -19,4 +19,6 @@
 .footer {
   background-color: #333333;
   color: #e94445;
+  bottom: 0;
+  position: relative;
 }
