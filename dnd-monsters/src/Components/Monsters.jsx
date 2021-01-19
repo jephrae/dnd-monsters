@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Monsters(props) {
   const [monsters, setMonsters] = useState([]);
@@ -20,17 +20,19 @@ export default function Monsters(props) {
     return <h2>loading...</h2>;
   }
 
+  console.log(monsters.name);
+
   return (
     <section className="container">
       {monsters.map((monsters) => {
         return (
-          <div classname="monsters">
+          <div className="monsters" key={monsters.index}>
             <p>{monsters.name}</p>
           </div>
         );
       })}
+
       <p>monster {monsters.index} test</p>
-      console.log({monsters.name})
     </section>
   );
 }
