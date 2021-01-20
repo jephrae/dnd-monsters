@@ -9,6 +9,7 @@
 
 .App {
   text-align: center;
+  background-color: #cec2ae;
 }
 
 .header {
@@ -32,10 +33,18 @@ a.footer {
 }
 
 .home {
-  height: 600px;
+  /* height: 600px; */
 }
 
 .monster-list {
+  display: grid;
   text-decoration: none;
   color: #e94445;
+  list-style: none;
+}
+
+.monster-stat-att {
+  column-count: 2;
+  column-width: auto;
+  line-height: 2em;
 }

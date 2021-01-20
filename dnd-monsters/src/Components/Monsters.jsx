@@ -32,7 +32,11 @@ export default function Monsters(props) {
           // const { name, index } = monster;
           // console.log(monsters.results);
           return (
-            <Link to={`/MonsterDetails/${monsters.index}`} key={monsters.index}>
+            <Link
+              to={`/MonsterDetails/${monsters.index}`}
+              key={monsters.index}
+              style={{ color: "#e94445", textDecoration: "none" }}
+            >
               <li key={monsters.index}>{monsters.name}</li>
             </Link>
           );
