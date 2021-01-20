@@ -24,7 +24,10 @@ export default function Monsters(props) {
   }
   return (
     <>
-      <h1 className="monsterlistname">monsters</h1>
+      <div className="monsterlistname">
+        <h1>Ye Olde List of Monsters</h1>
+        <p>click the mosnter name to learn more</p>
+      </div>
       <br />
       <ul className="monster-list">
         {monsterData.map((monsters, index) => {
