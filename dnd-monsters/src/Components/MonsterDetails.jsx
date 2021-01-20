@@ -16,9 +16,12 @@ export default function MonsterDetails(props) {
   if (!monster) {
     return <h3>loading...</h3>;
   }
-  const monsterSpecial = monster.special_abilities;
-  const monsterActions = monster.actions;
-  const monsterLegendary = monster.legendary_actions;
+  let monsterSpecial = monster.special_abilities;
+  if (monsterSpecial === undefined) monsterSpecial = [];
+  let monsterActions = monster.actions;
+  if (monsterActions === undefined) monsterActions = [];
+  let monsterLegendary = monster.legendary_actions;
+  if (monsterLegendary === undefined) monsterLegendary = [];
 
   if (monster.length < 1) {
     return <h3>loading...</h3>;
@@ -90,7 +93,7 @@ export default function MonsterDetails(props) {
           </div>
           {monsterActions.map((monster, index) => {
             if (monsterActions.length < 1) {
-              return <h3>none</h3>;
+              return <h3>no actions</h3>;
             }
             return (
               <li key={monster.index} style={{ listStyle: "none" }}>
@@ -107,8 +110,9 @@ export default function MonsterDetails(props) {
           </div>
           {monsterSpecial.map((monster, index) => {
             if (monster.length < 1) {
-              return <h3>none</h3>;
+              return <h3>no special abilities</h3>;
             }
+
             return (
               <li key={monster.index} style={{ listStyle: "none" }}>
                 <h4> {monster.name}</h4> {monster.desc}
@@ -122,13 +126,14 @@ export default function MonsterDetails(props) {
           <div className="subhed" style={{ color: "#a34c50" }}>
             <h3>Legendary Abilities:</h3>
           </div>
+
           {monsterLegendary.map((monster, index) => {
             if (monsterLegendary.length < 1) {
               return <h3>no legendary actions</h3>;
             }
             return (
               <li key={monster.index} style={{ listStyle: "none" }}>
-                <h4> {monster.name}</h4> {monster.desc}
+                <h4> {monster.name}</h4> {monster.desc}{" "}
               </li>
             );
           })}
