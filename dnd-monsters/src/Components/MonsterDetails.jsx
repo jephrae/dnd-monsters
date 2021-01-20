@@ -20,32 +20,54 @@ export default function MonsterDetails(props) {
     <div className="monster-container">
       <div className="monster-name">
         <h2> {monster.name}</h2>
+        <div className="size-type">
+          {monster.size} {monster.type}
+        </div>
       </div>
-
-      <div className="armorclass">
-        {" "}
-        <GiIcons.GiChestArmor />
-        {monster.armor_class}
+      <div className="monsterstats">
+        <div className="armorclass">
+          AC:
+          {monster.armor_class}
+          <GiIcons.GiChestArmor />
+        </div>
+        <div className="hitpoints">
+          HP:
+          {monster.hit_points}
+          <FaIcons.FaRegHeart />
+        </div>
+        <div className="hitdice">
+          Hit Dice: {monster.hit_dice}
+          <GiIcons.GiDiceTwentyFacesTwenty />
+        </div>
+        <div className="walkspeed">
+          Walk Speed:
+          {monster.speed.walk}
+          <GiIcons.GiRun />
+        </div>
       </div>
-      <div className="hitpoints">
-        <FaIcons.FaRegHeart />
-        {monster.hit_points}
-      </div>
-      <div className="hitdice">
-        <GiIcons.GiDiceTwentyFacesTwenty />
-        {monster.hit_dice}
-      </div>
-      <div className="speed">
-        <GiIcons.GiRun />
-        {monster.speed.walk}
-      </div>
-      <div className="attributes">
-        STR: {monster.strength}
-        DEX: {monster.dexterity}
-        CONST: {monster.constitution}
-        INT: {monster.intelligence}
-        WIS: {monster.wisdom}
-        CHR: {monster.charisma}
+      <div className="monster-attributes">
+        <div className="str">
+          STR: {monster.strength} <GiIcons.GiStrongMan />
+        </div>
+        <div className="dex">
+          DEX: {monster.dexterity} <GiIcons.GiFencer />
+        </div>
+        <div className="const">
+          CONST: {monster.constitution}
+          <GiIcons.GiHealthPotion />
+        </div>
+        <div className="int">
+          INT: {monster.intelligence}
+          <GiIcons.GiBrain />
+        </div>
+        <div className="wis">
+          WIS: {monster.wisdom}
+          <GiIcons.GiLightBulb />
+        </div>
+        <div className="chr">
+          CHR: {monster.charisma}
+          <GiIcons.GiSuspicious />
+        </div>
       </div>
     </div>
   );
