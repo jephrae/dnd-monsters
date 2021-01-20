@@ -19,7 +19,10 @@ export default function MonsterDetails(props) {
   const monsterSpecial = monster.special_abilities;
   const monsterActions = monster.actions;
   const monsterLegendary = monster.legendary_actions;
-  console.log(monster.actions);
+
+  if (monster.length < 1) {
+    return <h3>loading...</h3>;
+  }
   return (
     <div className="monster-container">
       <div className="monster-name">
@@ -86,6 +89,9 @@ export default function MonsterDetails(props) {
             <h3>Actions:</h3>
           </div>
           {monsterActions.map((monster, index) => {
+            if (monsterActions.length < 1) {
+              return <h3>none</h3>;
+            }
             return (
               <li key={monster.index} style={{ listStyle: "none" }}>
                 <h4> {monster.name}</h4> {monster.desc}
@@ -100,6 +106,9 @@ export default function MonsterDetails(props) {
             <h3>Special Abilities:</h3>
           </div>
           {monsterSpecial.map((monster, index) => {
+            if (monster.length < 1) {
+              return <h3>none</h3>;
+            }
             return (
               <li key={monster.index} style={{ listStyle: "none" }}>
                 <h4> {monster.name}</h4> {monster.desc}
@@ -114,6 +123,9 @@ export default function MonsterDetails(props) {
             <h3>Legendary Abilities:</h3>
           </div>
           {monsterLegendary.map((monster, index) => {
+            if (monsterLegendary.length < 1) {
+              return <h3>no legendary actions</h3>;
+            }
             return (
               <li key={monster.index} style={{ listStyle: "none" }}>
                 <h4> {monster.name}</h4> {monster.desc}
