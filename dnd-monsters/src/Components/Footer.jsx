@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "../App.css";
 
 export default function Footer() {
-    return (
-        <div>
-            <p>this the footer.</p>
-        </div>
-    )
+  return (
+    <div>
+      <p>
+        data from <a href="https://www.dnd5eapi.co/"> dnd5api </a>
+      </p>
+    </div>
+  );
 }

@@ -15,10 +15,27 @@
   background-color: #333333;
   color: #e94445;
 }
-
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 .footer {
   background-color: #333333;
   color: #e94445;
   bottom: 0;
-  position: relative;
+  position: fixed;
+  width: 100%;
+}
+a.footer {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.home {
+  height: 600px;
+}
+
+.monster-list {
+  text-decoration: none;
+  color: #e94445;
 }
