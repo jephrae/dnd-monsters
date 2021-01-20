@@ -11,8 +11,6 @@ export default function Monsters(props) {
     const response = await fetch(url);
     const monsters = await response.json();
     setMonsters(monsters);
-    console.log(monsters);
-    console.log(monsters.results);
   };
 
   useEffect(() => {
@@ -26,7 +24,7 @@ export default function Monsters(props) {
   }
   return (
     <>
-      <h2>monsters</h2>
+      <h1 className="monsterlistname">monsters</h1>
       <br />
       <ul className="monster-list">
         {monsterData.map((monsters, index) => {

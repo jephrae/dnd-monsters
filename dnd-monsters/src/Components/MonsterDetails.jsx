@@ -90,6 +90,7 @@ export default function MonsterDetails(props) {
         <div className="monsterActions">
           <div className="subhed" style={{ color: "#a34c50" }}>
             <h3>Actions:</h3>
+            <br />
           </div>
           {monsterActions.map((monster, index) => {
             if (monsterActions.length < 1) {
@@ -102,11 +103,13 @@ export default function MonsterDetails(props) {
             );
           })}
         </div>
-      </div>
+      </div>{" "}
+      <br />
       <div className="monster-legendary-container">
         <div className="monster-specials">
           <div className="subhed" style={{ color: "#a34c50" }}>
             <h3>Special Abilities:</h3>
+            <br />
           </div>
           {monsterSpecial.map((monster, index) => {
             if (monster.length < 1) {
@@ -121,11 +124,13 @@ export default function MonsterDetails(props) {
           })}
         </div>
       </div>
+      <br />
       <div className="monster-legendary-container">
         <div className="monster-legendary">
           <div className="subhed" style={{ color: "#a34c50" }}>
             <h3>Legendary Abilities:</h3>
           </div>
+          <br />
 
           {monsterLegendary.map((monster, index) => {
             if (monsterLegendary.length < 1) {
