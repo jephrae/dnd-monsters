@@ -9,13 +9,14 @@
 
 .App {
   background-color: #cec2ae;
-  height: 100%;
+  height: 95%;
 }
 
 .header {
   background-color: #333333;
   color: #e94445;
   text-align: center;
+  height: 10%;
 }
 a.header {
   color: inherit;
@@ -27,23 +28,26 @@ a.header {
   bottom: 0;
   position: relative;
   width: 100%;
+  height: 5%;
+  text-align: center;
 }
 a.footer {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
 .home {
-  height: 1200px;
+  height: 100vh;
+  text-align: center;
 }
 .search {
-  height: 1200px;
+  height: 100vh;
 }
 .random {
-  height: 1200px;
+  height: 100vh;
 }
 .monster-container {
-  height: 100%;
+  height: 100vh;
   justify-content: left;
   padding-left: 1.5em;
 }
@@ -55,8 +59,8 @@ a.footer {
 }
 .size-type,
 .alignment {
-  text-align: right;
-  padding-left: 4em;
+  text-align: left;
+  padding-left: 2em;
   color: #264c5e;
 }
 .monsterlistname {
@@ -66,7 +70,7 @@ a.footer {
 .monster-list {
   display: grid;
   text-decoration: none;
-  color: #e94445;
+  color: #a34c50;
   list-style: none;
   padding-left: 1em;
   line-height: 1.5em;
@@ -87,4 +91,9 @@ a.footer {
 
 .subhead {
   color: #e94445;
+}
+
+.random-monster-name {
+  text-align: center;
+  padding: 4em;
 }

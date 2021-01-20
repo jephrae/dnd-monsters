@@ -28,8 +28,13 @@ export default function RandomMonster() {
   return (
     <div className="random">
       <div className="random-monster-name">
-        <Link to={`/MonsterDetails/${randomPick.index}`} key={randomPick.index}>
+        <Link
+          to={`/MonsterDetails/${randomPick.index}`}
+          key={randomPick.index}
+          style={{ color: "#a34c50", textDecoration: "none" }}
+        >
           <h1>{randomPick.name}</h1>
+          <p> click to read more about the {randomPick.name}</p>
         </Link>
       </div>
     </div>
