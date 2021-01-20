@@ -19,9 +19,10 @@ function App() {
       <Switch>
         <Sidebar />
       </Switch>
-      <div className="Home">
-        <Route path="/Home" exact component={Home} />
 
+      <div className="Home">
+        <Route path="/" exact component={Home} />
+        <Route path="/Home" exact component={Home} />
         <Route path="/Monsters" exact component={Monsters} />
         <Route path="/MonsterSearch" exact component={MonsterSearch} />
         <Route path="/RandomMonster" exact component={RandomMonster} />

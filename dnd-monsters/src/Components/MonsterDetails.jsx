@@ -16,14 +16,19 @@ export default function MonsterDetails(props) {
   if (!monster) {
     return <h3>loading...</h3>;
   }
-
+  const monsterSpecial = monster.special_abilities;
+  const monsterActions = monster.actions;
+  const monsterLegendary = monster.legendary_actions;
+  console.log(monster.actions);
   return (
     <div className="monster-container">
       <div className="monster-name">
-        <h2> {monster.name}</h2>
+        <h1> {monster.name}</h1>
         <div className="size-type">
-          {monster.size} {monster.type}
-          <br />
+          <h3>
+            {monster.size} {monster.type}
+          </h3>
+          <div className="alignment">{monster.alignment}</div>
         </div>
       </div>
       <div className="monster-stat-att">
@@ -46,6 +51,8 @@ export default function MonsterDetails(props) {
             Walk Speed:
             {monster.speed.walk}
             <GiIcons.GiRun /> <br />
+            <br />
+            <br />
           </div>
         </div>
         <div className="monster-attributes">
@@ -71,6 +78,48 @@ export default function MonsterDetails(props) {
             CHR: {monster.charisma}
             <GiIcons.GiSuspicious />
           </div>
+        </div>
+      </div>
+      <div className="actions">
+        <div className="monsterActions">
+          <div className="subhed" style={{ color: "#a34c50" }}>
+            <h3>Actions:</h3>
+          </div>
+          {monsterActions.map((monster, index) => {
+            return (
+              <li key={monster.index} style={{ listStyle: "none" }}>
+                <h4> {monster.name}</h4> {monster.desc}
+              </li>
+            );
+          })}
+        </div>
+      </div>
+      <div className="monster-legendary-container">
+        <div className="monster-specials">
+          <div className="subhed" style={{ color: "#a34c50" }}>
+            <h3>Special Abilities:</h3>
+          </div>
+          {monsterSpecial.map((monster, index) => {
+            return (
+              <li key={monster.index} style={{ listStyle: "none" }}>
+                <h4> {monster.name}</h4> {monster.desc}
+              </li>
+            );
+          })}
+        </div>
+      </div>
+      <div className="monster-legendary-container">
+        <div className="monster-legendary">
+          <div className="subhed" style={{ color: "#a34c50" }}>
+            <h3>Legendary Abilities:</h3>
+          </div>
+          {monsterLegendary.map((monster, index) => {
+            return (
+              <li key={monster.index} style={{ listStyle: "none" }}>
+                <h4> {monster.name}</h4> {monster.desc}
+              </li>
+            );
+          })}
         </div>
       </div>
     </div>
