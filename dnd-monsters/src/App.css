@@ -8,6 +8,7 @@
 }
 
 .App {
+  display: flexbox;
   background-color: #cec2ae;
   height: 95%;
 }
@@ -15,6 +16,7 @@
 .header {
   background-color: #333333;
   color: #e94445;
+  display: flexbox;
   padding-top: 1em;
   text-align: center;
   height: 10%;
@@ -26,6 +28,7 @@ a.header {
 .footer {
   background-color: #333333;
   color: #e94445;
+  display: flexbox;
   bottom: 0;
   position: relative;
   width: 100%;
@@ -49,6 +52,7 @@ a.footer {
 }
 .monster-container {
   /* height: 1200px; */
+  display: flexbox;
   justify-content: left;
   padding-left: 1.5em;
 }
@@ -60,6 +64,8 @@ a.footer {
 }
 .size-type,
 .alignment {
+  display: flexbox;
+  flex: content;
   text-align: left;
   padding-left: 2em;
   color: #264c5e;
@@ -72,15 +78,17 @@ p.monsterlistname {
   text-align: center;
 }
 .monster-list {
-  display: grid;
+  display: flexbox;
   text-decoration: none;
   color: #a34c50;
   list-style: none;
   padding-left: 1em;
   line-height: 1.5em;
+  flex-direction: column;
 }
 
 .monster-stat-att {
+  display: flexbox;
   margin-top: 7%;
   column-count: 2;
   column-width: auto;
@@ -88,6 +96,7 @@ p.monsterlistname {
 }
 
 .monster-attributes {
+  display: flexbox;
   font-size: smaller;
   text-align: right;
   padding-right: 1.5em;
@@ -98,6 +107,7 @@ p.monsterlistname {
 }
 
 .random-monster-name {
+  display: flexbox;
   text-align: center;
   padding: 4em;
 }
